@@ -1,0 +1,231 @@
+@page { 
+  size: auto;  
+  margin: 24pt; 
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(fonts/roboto/Roboto-Bold.ttf);
+}
+
+.resume {
+  width: 21cm; 
+  font-family: "Tahoma";
+  font-size: 11pt;
+  background-color: white;
+  margin: auto;
+  padding: 1cm;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+}
+ 
+.flexContainer {
+  display: flex;
+}
+
+.name {
+  padding-left: 0.5cm;
+  vertical-align: top;
+  font-size: 14pt;
+  font-weight: bold;
+  color: black;
+}
+
+.personal, .social {
+  font-size: 11pt;
+  font-weight: normal;
+  width: 13cm;
+  line-height: 20pt;
+}
+
+.resumeHeader, .resumeBody, .resumeFooter {
+  display: flex;
+  align-items: stretch;
+  font-family: "Tahoma";
+  font-size: 11pt;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.smallIcon {
+  width: 16px;
+  height: 16px;
+}
+
+h3, h4, h5, h6  {
+  font-family: "Tahoma";
+  margin-bottom: 3pt;
+  margin-top: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 8vh 0 3vh 0;
+  font-family: "Roboto-Bold"; 
+}
+
+h2 {
+  margin: 5vh 0 0 0;
+  font-family: "Roboto-Bold";
+}
+
+h3 {
+  font-size: 12pt;
+  color: #3f51b5;
+  margin-top: 16pt;
+}
+
+p {
+  font-family: Tahoma;
+  font-weight: 11pt;
+  line-height: 16pt;
+}
+
+.resumeMain {
+  width: 63%;
+}
+
+.side {
+  width: 33%;
+}
+
+.content {
+  background-color: white;
+  font-family: "Roboto-Regular";
+  align-items: center;
+  align-content: center;
+  margin-top: 10pt;
+  width: 80%;
+}
+
+.professionalSummary {
+  padding-left: 10pt;
+}
+
+.emptyDiv {
+  width: 4%;
+}
+
+.nondecoratedList {
+  list-style-type: none;
+  padding-left: 10pt;
+}
+
+.unorderedList {
+  list-style-type: disc;
+  padding-left: 12pt;
+}
+
+ul li {
+  padding: 3pt;
+}
+
+ul {
+  margin: 0 0 0 0;
+}
+
+.subtitle {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.subSubtitle {
+  font-size: 8pt;
+  font-weight: bold;
+  color: #1fbb27;
+}
+
+.background {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.headerContainer {
+  padding: 10pt;
+}
+
+body {
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.navigationWrapper {
+  background:#3f51b5;
+}
+
+.navigation {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  font-size: 14pt;
+  font-family: "Roboto-Regular";
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  font-size: 14pt;
+  font-family: "Tahoma";
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color:white;
+}
+
+nav a:hover {
+  color: #f50057;
+}
+
+.logging {
+  align-self: right;
+}
+
+.header {
+  display:flex;
+  flex-direction: column;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatarContainer .uploadImageButton {
+  position: absolute;
+  top: 35%;
+  left: 60%;
+}
+
+.main {
+  font-family: "Roboto-Regular";
+}
+
+#primaryNav {
+  margin-left: 100px;
+  flex-grow: 10;
+}
+
+#secondaryNav {
+  flex-grow: 1;
+}
