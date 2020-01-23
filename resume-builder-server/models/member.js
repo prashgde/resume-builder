@@ -1,6 +1,79 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const SchemaTypes = require('./schematypes')
+
+const Job = new Schema({
+    title: {
+        type: String,
+        required:true
+    },
+    responsibilities: {
+        type: [String],
+        required:true
+    },
+    period: {
+        startDate: {
+            type: Date,
+            required: false
+        },
+        endDate: {
+            type: Date,
+            required: false,
+            default: null
+        }
+    }
+})
+
+const Institute = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    yearOfPassing: {
+        type: Date,
+        required: true
+    },
+    result: {
+        type: String,
+        required: true
+    }
+})
+
+const Skill = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    rating: {
+        type: Number,
+        required: true
+    }
+})
+
+const Project = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    descriptionItems: {
+        type: [String],
+        required: true
+    },
+    responsibilities: {
+        type: [String],
+        required: true
+    }
+})
+
+const Interest = new Schema({
+    category: {
+        type: String,
+        required: true
+    },
+    interests: {
+        type: [String],
+        required: true
+    }
+})
 
 const Member = new Schema({
     personal: {
@@ -64,15 +137,19 @@ const Member = new Schema({
     },
     empHistory : {
         jobs: {
-            type: [SchemaTypes.Job],
+            type: [Job],
             required:true
         }
     },
+    skills: {
+        type: [Skill],
+        required: true   
+    },
     education: {
-        institutes: [SchemaTypes.Institute]
+        institutes: [Institute]
     },
     projects: {
-        type: [SchemaTypes.Project],
+        type: [Project],
         required: true
     },
     rewsAndReco : {
@@ -86,7 +163,7 @@ const Member = new Schema({
         default: null
     },
     interests: {
-        type: [SchemaTypes.Interest],
+        type: [Interest],
         required: false,
         default: null
     }

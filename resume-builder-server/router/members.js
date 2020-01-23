@@ -1,8 +1,55 @@
 const express = require('express')
-const SchemaTypes = require('../models/schematypes')
 const Member = require('../models/member')
 
 const router = express.Router();
+
+//Defining again javascript objects in accordance with the nested schematypes
+
+function getJobInstance () {
+    const _job = {
+        title: String,
+        responsibilities: [],
+        period: {
+            startDate: Date,
+            endDate: Date
+        }
+    }
+    return _job
+}
+ 
+function getInstituteInstance() {
+    const _institute = {
+        name: String,
+        yearOfPassing: Date,
+        result: String
+    }
+    return _institute
+}
+
+function getSkillInstance() {
+    const _skill = {
+        name: String,
+        rating: Number
+    }
+    return _skill
+}
+
+function getProjectInstance() {
+    const _project = {
+        title: String,
+        descriptionItems: [],
+        responsibilities: []
+    }
+    return _project
+}
+
+function getInterestInstance() {
+    const _interest = {
+        category: String,
+        interests: []
+    }
+    return _interest
+}
 
 
 router.get('/', async (req, res) => {
@@ -14,27 +61,91 @@ router.get('/', async (req, res) => {
     }
 })
 
+let getJobs = (req) => {
+    const _jobs = []
+    req.body.empHistory.jobs.map(job => {
+        _job = getJobInstance()
+        _job.title = job.title
+        job.responsibilities.map(responsibility => {
+            _job.responsibilities.push(responsibility)
+        })
+        _job.period.startDate = job.period.startDate
+        _job.period.endDate = job.period.endDate
+        _jobs.push(_job)
+    })
+    return _jobs
+}
+
+let getInstitutes = (req) => {
+    const _institutes = []
+    req.body.education.institutes.map(institute => {
+        _institute = getInstituteInstance()
+        _institute.name = institute.name
+        _institute.yearOfPassing = institute.yearOfPassing
+        _institute.result = institute.result
+        _institutes.push(_institute)
+    })
+    return _institutes
+}
+
+let getSkills = (req) => {
+    const _skills = []
+    req.body.skills.map(skill => {
+        _skill = getSkillInstance()
+        _skill.name = skill.name
+        _skill.rating = skill.rating
+        _skills.push(_skill)
+    })
+    return _skills
+}
+
+let getProjects = (req) => {
+    const _projects = []
+    req.body.projects.map(project => {
+        _project = getProjectInstance()
+        _project.title = project.title
+        project.descriptionItems.map(descItem => {
+            _project.descriptionItems.push(descItem)
+        })
+        project.responsibilities.map(responsibility => {
+            _project.responsibilities.push(responsibility)
+        })
+        console.log(_project)
+        _projects.push(_project)
+    })
+    return _projects
+}
+
+let getInterests = (req) => {
+    const _interests = []
+    req.body.interests.map(interest => {
+        _interest = getInterestInstance()
+        _interest.category = interest.category
+        interest.interests.map(intr => {
+            _interest.interests.push(intr)
+        })
+        _interests.push(_interest)
+    })
+    return _interests
+}
 
 router.post('/', (req, res) => {
     //Employment History
-    let _job = SchemaTypes.Job
-    let _jobs = [_job]
-    console.log(Array.isArray(_job.responsibilities))
-    /*let getJobs = () => {
-        req.body.empHistory.jobs.map(job => {
-            _job.title = job.title
-            job.responsibilities.map(responsibility => {
-                _job.responsibilities.push(responsibility)
-                console.log(responsibility)
-            })
-            _jobs.push(_job)
-        })
-        return _jobs
-    }
+    const jobs = getJobs(req)
 
     //Education
+    const institutes = getInstitutes(req)
     
-    const jobs = getJobs()*/
+    //Skills
+    const skills = getSkills(req)
+
+    //Projects
+    const projects = getProjects(req)
+
+    //Interests
+    const interests = getInterests(req)
+      
+    //Member
     const member = new Member({
         personal: {
             name: req.body.personal.name,
@@ -52,13 +163,16 @@ router.post('/', (req, res) => {
         },
         profSummary: req.body.profSummary,
         empHistory: {
-            jobs: req.body.empHistory.jobs
+            jobs: jobs
         },
-        education: req.body.education,
-        projects: req.body.projects,
+        education: {
+            institutes: institutes
+        },
+        skills: skills,
+        projects: projects,
         rewsAndReco: req.body.rewsAndReco,
         workshops: req.body.workshops,
-        interests: req.body.interests
+        interests: interests
     })
     member.save()
         .then(data => {
