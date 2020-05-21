@@ -28,8 +28,7 @@ const member = {
                 measurements and Triggered captures.`,
                 "Has a responsive UI built using UI Fabric React.",
                 "Uses Node server to provide REST API's.",
-                "Node server communicates to C/C++ instrument parser using sockets.",
-                "This was not productized due to security reasons."
+                "Node server communicates to C/C++ instrument parser using sockets."
             ],
             "responsibilities": [
                 "Designed the user interface for the add in using Fabric React.",
@@ -48,11 +47,11 @@ const member = {
                 `Enables post analysis of data. What a user can achieve with it is 
                 only restricted by his/her imagination.`,
                 `It's a C# Winform Application that uses TCP sockets to communicate 
-                to the instrument parser`,
+                to the instrument parser.`,
             ],
             "responsibilities": [
                 "Refined the requirements.",
-                "Implemented the complete UI and backend."
+                "Implemented the complete UI and backend from scratch."
             ]
         },
         {
@@ -63,7 +62,7 @@ const member = {
                 configure, and debug test systems.`,
                 `Provides a web solution to access, control supported instruments.`,
                 `Enables Remote Desktop feature on a browser as an option.`,
-                `Ensures broad instrument availability`,
+                `Ensures broad instrument availability.`,
                 `Is supported by a wide array of instruments.`,
                 `Uses tomcat web server as a middleware between the Web UI and the instrument parser.`
             ],

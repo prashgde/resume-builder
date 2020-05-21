@@ -129,6 +129,7 @@ let getInterests = (req) => {
     return _interests
 }
 
+//Update to database
 router.post('/', (req, res) => {
     //Employment History
     const jobs = getJobs(req)
@@ -183,7 +184,7 @@ router.post('/', (req, res) => {
         })
 })
 
-//Specific member
+//Find a specific member
 router.get('/:memberId', async (req, res) => {
     try {
         const member = await Member.findById(req.params.memberId)

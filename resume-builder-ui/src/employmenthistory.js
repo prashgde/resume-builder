@@ -7,10 +7,8 @@ const member = {
            "title": `Software Design Engineer II, Tektronix Engineering India Private Limited, 
            Bangalore`,
            "responsibilities": [
-              `Design and develop platform independent software solutions and web solutions that enable users to 
-              communicate to instruments and control them using PC.",
-              "Use systematic approches and tools to design, develop and test the software and 
-              improve the quality.`
+              "Design and develop platform independent software solutions and web solutions that enable users to communicate to instruments and control them using PC.",
+              "Use systematic approaches and tools to design, develop and test the software and improve the quality."
            ],
            "period": "Jul. 2014 - Present"
         },

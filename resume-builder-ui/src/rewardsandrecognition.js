@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const member = {
     "rewardsandrecognition": [
         `Runner up of Best Booth for TekExcel Addin in Scintilla 2018, an Engineering symposium held at Tektronix, Fluke, Anderson-Negele and Setra.`,
-        `Mutliple "Inspire Awards" for contribution to LXI Certification for different series of instruments.`,
+        `Multiple "Inspire Awards" for contribution to LXI Certification for different series of instruments.`,
         "Runner Up at Table Tennis Tournament held at Tektronix, Fluke, Anderson-Negele.",
         "Winner of Fortive has got talent for singing/whistling performace.",
         "Winner of several cultural activities held at Tektronix and Fluke.",

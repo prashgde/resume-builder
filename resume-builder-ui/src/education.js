@@ -4,7 +4,7 @@ import EducationIcon from './images/icons/education.png'
 const member = {
     "institutes": [
         {
-            "name": "Rastriya Vidyalaya College of Engineering, Bangalore",
+            "name": "RV College of Engineering, Bangalore",
             "yearOfPassing": "2014",
             "result": "CPGA: 8.82"
         },
