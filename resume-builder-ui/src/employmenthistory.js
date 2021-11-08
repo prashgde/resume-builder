@@ -4,15 +4,24 @@ import EmploymentHistoryIcon from './images/icons/employmenthistory.png'
 const member = {
     "jobs" : [
         {
+            "title": `Senior Software Develop Engineer, Infinera India Private Limited, 
+            Bangalore`,
+            "responsibilities": [
+               `Develop embedded software applications to perform routing and signlaling in an optical network.`,
+               `Add enhanced features to the testing framework using Javascript.`
+            ],
+            "period": "Jun. 2020 - Present"
+        },
+        {
            "title": `Software Design Engineer II, Tektronix Engineering India Private Limited, 
            Bangalore`,
            "responsibilities": [
               `Design and develop platform independent software solutions and web solutions that enable users to 
-              communicate to instruments and control them using PC.",
-              "Use systematic approches and tools to design, develop and test the software and 
+              communicate to instruments and control them using PC.`,
+              `Use systematic approches and tools to design, develop and test the software and 
               improve the quality.`
            ],
-           "period": "Jul. 2014 - Present"
+           "period": "Jul. 2014 - May 2020"
         },
         {
            "title": "Intern, Gnostice Information Technologies, Bangalore",

@@ -3,7 +3,7 @@ import ProfessionalSummaryIcon from './images/icons/professionalsummary.png'
 
 const member = {
     "professionalSummary":
-    `Highly skillful, successful Software Engineer with verifiable success in delivering 
+    `Skillful Software Engineer with verifiable success in delivering 
     appropriate technology solutions to the customers. 
     Comprehensive knowledge of agile methodologies, desktop and web-based applications. 
     Innovative change agent with a unique mix 

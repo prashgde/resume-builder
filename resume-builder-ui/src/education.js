@@ -20,6 +20,7 @@ class Education extends Component {
     render() {
         return (
             <div>
+                <br/>
                 <h3>
                     <img src={EducationIcon} className="smallIcon" alt="education"></img> Education
                 </h3>

@@ -9,8 +9,8 @@ const member = {
     "personal": {
         "name": "PRASANNA HEGDE",
         "address": "Honavar, Karnataka - 581 334",
-        "email": "prashgde@gmail.com",
-        "phone": "+91-95916-18890"
+        "email": "prasanna.chittani@gmail.com",
+        "phone": "+91-99009-63303"
     }
 }
 

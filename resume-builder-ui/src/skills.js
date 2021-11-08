@@ -5,11 +5,19 @@ import SkillsIcon from './images/icons/skills.png'
 const member = {
     "skills": [
         {
-            "name": "OOPS",
+            "name": "React",
+            "rating": 4
+        },
+        {
+            "name": "Javascript",
             "rating": 4
         },
         {
             "name": "Web Development",
+            "rating": 4
+        },
+        {
+            "name": "OOPS",
             "rating": 4
         },
         {
@@ -21,21 +29,13 @@ const member = {
             "rating": 3
         },
         {
-            "name": "C++",
-            "rating": 3
-        },
-        {
             "name": "HTML",
             "rating": 4
         },
         {
-            "name": "Javascript",
-            "rating": 4
-        },
-        {
-            "name": "React",
+            "name": "C++",
             "rating": 3.5
-        },
+        }
     ]
 }
 
